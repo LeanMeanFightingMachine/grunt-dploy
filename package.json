@@ -1,0 +1,31 @@
+{
+  "name": "grunt-dploy",
+  "version": "0.0.1",
+  "author": "Lucas Motta <http://lucasmotta.com>",
+  "description": "Grunt task to deploy websites using DPLOY",
+  "keywords": [
+    "ftp",
+    "sftp",
+    "deploy",
+    "git",
+    "gruntplugin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LeanMeanFightingMachine/grunt-dploy"
+  },
+  "engines": {
+    "node": ">= 0.10.x"
+  },
+  "dependencies": {
+    "dploy": "1.x.x"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.x",
+    "grunt-contrib-coffee": "~0.7.x",
+    "grunt-contrib-watch": "~0.5.x",
+    "grunt-bump": "~0.0.x",
+    "grunt-shell": "~0.6.x",
+    "grunt-coffeelint": "0.0.x"
+  }
+}
