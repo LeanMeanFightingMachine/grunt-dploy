@@ -1,6 +1,6 @@
 {
   "name": "grunt-dploy",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Lucas Motta <http://lucasmotta.com>",
   "description": "Grunt task to deploy websites using DPLOY",
   "keywords": [
