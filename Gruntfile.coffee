@@ -6,20 +6,6 @@ module.exports = (grunt) ->
 	# Project configuration
 	grunt.initConfig
 		
-		# Compile Coffee
-		coffee: 
-			source: 
-				files: "tasks/dploy.js": "src/dploy.coffee"
-				options: bare: true
-
-		# CoffeeLint
-		coffeelint:
-			options:
-				no_tabs: level: "ignore"
-				indentation: level: "ignore"
-				max_line_length: level: "ignore"
-
-			source: ["src/**/*.coffee"]
 
 		# Bump files
 		bump:
@@ -31,14 +17,8 @@ module.exports = (grunt) ->
 			publish:
 				command: "npm publish"
 
-		# Watch for changes
-		watch:
-			coffee:
-				files: ["src/**/*.coffee"]
-				tasks: ["coffee"]
 
-
-	grunt.registerTask "default", ["coffeelint", "coffee"]
+	grunt.registerTask "default", ["release"]
 	grunt.registerTask "release", "Release a new version, push it and publish", (target) ->
 		target ?= "patch"
-		grunt.task.run "coffeelint", "bump-only:#{target}", "coffee", "bump-commit", "shell:publish"
+		grunt.task.run "bump-only:#{target}", "bump-commit", "shell:publish"
