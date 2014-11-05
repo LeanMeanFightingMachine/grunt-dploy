@@ -29,9 +29,9 @@ grunt.loadNpmTasks('grunt-dploy');
 grunt.initConfig({
     dploy: {                                    // Task
         stage: {                                // Target
-            host: "ftp.myserver.com"            // Your FTP host
-            user: "user"                        // Your FTP user
-            pass: "secret-password"             // Your FTP secret-password
+            host: "ftp.myserver.com",           // Your FTP host
+            user: "user",                       // Your FTP user
+            pass: "secret-password",            // Your FTP secret-password
             path: {
                 local: "deploy/",               // The local folder that you want to upload
                 remote: "public_html/"          // Where the files from the local file will be uploaded at in your remote server
